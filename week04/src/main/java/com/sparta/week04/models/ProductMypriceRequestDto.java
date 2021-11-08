@@ -3,6 +3,6 @@ package com.sparta.week04.models;
 import lombok.Getter;
 
 @Getter
-public class ProducMyrpiceRequestDto {
+public class ProductMypriceRequestDto {
     private int myprice;
 }

@@ -1,16 +1,17 @@
-package com.sparta.week04.models;
+package com.sparta.springcore.domain;
 
-import com.sparta.week04.models.ProductRequestDto;
-import com.sparta.week04.models.Timestamped;
+import com.sparta.springcore.dto.ProductRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
+@Setter
 @Getter // get 함수를 일괄적으로 만들어줍니다.
 @NoArgsConstructor // 기본 생성자를 만들어줍니다.
 @Entity // DB 테이블 역할을 합니다.
-public class Product extends Timestamped {
+public class Product extends Timestamped{
 
     // ID가 자동으로 생성 및 증가합니다.
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,10 +41,5 @@ public class Product extends Timestamped {
         this.link = requestDto.getLink();
         this.lprice = requestDto.getLprice();
         this.myprice = 0;
-    }
-
-    // 관심 가격 변경 시 이용합니다.
-    public void update(ProductMypriceRequestDto requestDto) {
-        this.myprice = requestDto.getMyprice();
     }
 }
