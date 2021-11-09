@@ -1,4 +1,4 @@
-package com.sparta.springcore;
+package com.sparta.springcore.utils;
 
 import com.sparta.springcore.dto.ItemDto;
 import org.json.JSONArray;
