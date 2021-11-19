@@ -23,10 +23,6 @@ public class Article extends Timestamped {
     @Column(nullable = false)
     private String comment;
 
-    public Article(int idx, String title, String comment) {
-        this.title = title;
-        this.comment = comment;
-    }
 
     public Article(ArticleRequestDto requestDto){
         this.title = requestDto.getTitle();
